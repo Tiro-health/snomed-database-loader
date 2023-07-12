@@ -1,4 +1,4 @@
-`≥from typing import Literal
+from typing import Literal
 from dataclasses import dataclass, field
 import re
 import logging

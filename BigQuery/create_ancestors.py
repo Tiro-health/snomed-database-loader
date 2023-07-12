@@ -134,5 +134,5 @@ class CreateInternationalFSNSnapDescription(base_table_creator.BaseTableCreator)
         return f"""
         SELECT * FROM `{self.dataset}.HSnapDescription`
         WHERE typeId = 900000000000003001 # Fully specified name
-        AND moduleId = 900000000000207008 # SNOMED-CT core module
+        AND moduleId IN UNNEST([900000000000207008, 900000000000012004])# SNOMED-CT core module
         """
